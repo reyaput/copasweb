@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>Two Dropdowns with Separate Text and Copy Buttons</title>
+    <style>
+      /* Reset and box sizing */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 20px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #f0f4f8;
+        color: #222;
+        max-width: 350px;
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+      h1 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #004aad;
+      }
+      section {
+        background: white;
+        border-radius: 12px;
+        padding: 15px 20px 20px;
+        box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
+        margin-bottom: 20px;
+        flex-shrink: 0;
+      }
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        font-size: 1rem;
+      }
+      select {
+        width: 100%;
+        padding: 10px 14px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        border: 1.8px solid #ccc;
+        font-size: 1rem;
+        background-color: white;
+        transition: border-color 0.3s ease;
+      }
+      select:focus {
+        outline: none;
+        border-color: #004aad;
+        box-shadow: 0 0 7px #4a90e2aa;
+      }
+      .text-output {
+        background: #eef5fb;
+        border-radius: 10px;
+        padding: 15px;
+        min-height: 100px;
+        font-size: 1.05rem;
+        line-height: 1.4;
+        border: 2px solid #004aad;
+        margin-bottom: 15px;
+        user-select: text;
+        white-space: pre-wrap;
+        color: #0a2540;
+        max-height: 200px;
+        overflow-y: auto;
+      }
+      button.copy-button {
+        background-color: #004aad;
+        color: white;
+        border: none;
+        padding: 12px 0;
+        font-weight: 700;
+        border-radius: 10px;
+        width: 100%;
+        font-size: 1.15rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      button.copy-button:hover,
+      button.copy-button:focus {
+        background-color: #003080;
+        outline: none;
+      }
+      button.copy-button:active {
+        background-color: #001d4a;
+      }
+      button.copy-button:disabled {
+        background-color: #999;
+        cursor: not-allowed;
+      }
+      footer {
+        margin-top: auto;
+        font-size: 0.9rem;
+        color: #666;
+        text-align: center;
+      }
+      @media (max-width: 400px) {
+        body {
+          padding: 15px;
+          max-width: 100vw;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Two Independent Dropdowns</h1>
+
+    <section aria-label="First dropdown and text section">
+      <label for="dropdown1">First Dropdown Options:</label>
+      <select
+        id="dropdown1"
+        aria-describedby="desc1"
+        aria-label="First dropdown"
+      >
+        <option value="" disabled selected>Select an option</option>
+        <option value="chat">Chat</option>
+        <option value="skin">Skin</option>
+        <option value="sow_salep">SOW Salep</option>
+        <option value="sow_body_wash">SOW Body Wash</option>
+        <option value="sow_kopi_mikro">SOW kopi mikro</option>
+        <option value="sow_kopi_nano">SOW kopi nano</option>
+        <option value="shipping">Shipping</option>
+      </select>
+      <div
+        id="text-output1"
+        class="text-output"
+        aria-live="polite"
+        aria-atomic="true"
+      >
+        Please select an option from the first dropdown.
+      </div>
+      <button
+        id="copy-button1"
+        class="copy-button"
+        aria-label="Copy first text to clipboard"
+        disabled
+      >
+        Copy First Text
+      </button>
+    </section>
+
+    <section aria-label="Second dropdown and text section">
+      <label for="dropdown2">Second Dropdown Options:</label>
+      <select
+        id="dropdown2"
+        aria-describedby="desc2"
+        aria-label="Second dropdown"
+      >
+        <option value="" disabled selected>Select an option</option>
+        <option value="brief_kopi_nano">Brief kopi nano</option>
+        <option value="brief_kopi_mikro">Brief kopi mikro</option>
+        <option value="brief_salep">Brief salep</option>
+        <option value="brief_body_wash">Brief body wash</option>
+      </select>
+      <div
+        id="text-output2"
+        class="text-output"
+        aria-live="polite"
+        aria-atomic="true"
+      >
+        Please select an option from the second dropdown.
+      </div>
+      <button
+        id="copy-button2"
+        class="copy-button"
+        aria-label="Copy second text to clipboard"
+        disabled
+      >
+        Copy Second Text
+      </button>
+    </section>
+
+    <footer>&copy; 2024 Dropdown App</footer>
+
+    <script>
+      // Text mappings for dropdown1
+      const textMap1 = {
+        chat: `Hallo kak, Perkenalkan nama aku Reynanda KOL Specialist dari Biotalk
+https://www.tiktok.com/@biotalk.id?lang=en 
+
+Saat ini kami sedang ada Project Campaign 2025. Kami tertarik untuk mengajak bekerjasama dengan kakak, untuk detail kerjasamanya dengan SOW berikut :
+SOW : 1VT + YELLOW CART + OWNING + BOOST CODE 365 DAYS 
+Timeline : Mei 2025
+Product : Coffee Scrub Soap/Honey Calendula Body Wash/Natural Calendula Salve
+
+Jika berminat boleh sertakan RCnya yaa. Aku tunggu kabar baiknya yaa kak 🥰`,
+        skin: `Mohon maaf sebelumnya Kak, apakah Kakak ada riwayat bekas luka/kulit sensitif/eksim? karena produk kami berfokus di masalah kulit`,
+        sow_salep: `Hallo Kakk, tim kita acc Kak berikut untuk SOW dan rcnya
+SOW: 1VT + OWNING + YELLOW CART
+RATE CARD: ………
+PRODUCT: Natural Calendula Salve
+TIMELINE: MEI 2025
+DEADLINE DRAFTING: H+3 sejak produk sampai
+DEADLINE POSTING: H+1 sejak drafting disetujui
+Untuk TnCnya apakah aman Kak?`,
+        sow_body_wash: `Hallo Kakk, tim kita acc Kak berikut untuk SOW dan rcnya
+SOW: 1VT + OWNING + YELLOW CART
+RATE CARD: ………
+PRODUCT: Bodywash (Calendula Series)
+TIMELINE: MEI 2025
+DEADLINE DRAFTING: H+3 sejak produk sampai
+DEADLINE POSTING: H+1 sejak drafting disetujui
+Untuk TnCnya apakah aman Kak?`,
+        sow_kopi_mikro: `Hallo Kakk, tim kita acc Kak berikut untuk SOW dan rcnya
+SOW: 1VT + YELLOW CART
+RATE CARD: ………
+PRODUCT: Coffee Scrub
+TIMELINE: MEI 2025
+DEADLINE DRAFTING: H+3 sejak produk sampai
+DEADLINE POSTING: H+1 sejak drafting disetujui
+Untuk TnCnya apakah aman Kak?`,
+        sow_kopi_nano: `Hallo Kakk, tim kita acc Kak berikut untuk SOW dan rcnya
+SOW: 1VT + OWNING + YELLOW CART + BOOST CODE 365
+RATE CARD: ………
+PRODUCT: Coffee Scrub
+TIMELINE: MEI 2025
+DEADLINE DRAFTING: H+3 sejak produk sampai
+DEADLINE POSTING: H+1 sejak drafting disetujui
+Untuk TnCnya apakah aman Kak?`,
+        shipping: `Mohon di lengkapi data berikut ya kak : 
+Nama : 
+Nama akun : 
+
+SHIPPING 
+Nama Penerima : 
+No Tlpn : 
+Alamat Lengkap (Jalan, No. rumah, Kec, Kel, Kode pos): 
+
+
+PAYMENT 
+PAYMENT (diutamakan BCA, E-Wallet/Bank Lain maka akan dipotong biaya admin)
+Nama BANK : 
+Nama Penerima : 
+No rek :
+
+Payment akan dilakukan setelah posting dan payment akan selalu dilakukan setiap Kamis`,
+      };
+
+      // Text mappings for dropdown2
+      const textMap2 = {
+        brief_kopi_nano: `
+https://docs.google.com/presentation/d/1LHrAh_FBtzW3eU_45_gcO-M9MOYJstUPwBkJOJUg2L0/edit?usp=sharing`,
+        brief_kopi_mikro: `
+https://docs.google.com/presentation/d/1JMP16zpM1D2a63-zZWVnroKfbCfRXTB8_bccVSfh6Ck/edit?usp=sharing`,
+        brief_salep: `
+https://docs.google.com/presentation/d/1UH-qSky42x4uRzB-z4KZh-21um1213IE-mldELSNzKg/edit?usp=sharing`,
+        brief_body_wash: ` 
+https://docs.google.com/presentation/d/123PQMGxQZCmS41VOdDUKkOY5A36JG73r7XqXzApXJ78/edit?slide=id.g2c518cc88a9_0_213#slide=id.g2c518cc88a9_0_213`,
+      };
+
+      const dropdown1 = document.getElementById("dropdown1");
+      const dropdown2 = document.getElementById("dropdown2");
+
+      const textOutput1 = document.getElementById("text-output1");
+      const textOutput2 = document.getElementById("text-output2"); // ✅ diperbaiki dari typo
+
+      const copyButton1 = document.getElementById("copy-button1");
+      const copyButton2 = document.getElementById("copy-button2");
+
+      function updateText1() {
+        const val = dropdown1.value;
+        if (val && textMap1[val]) {
+          textOutput1.textContent = textMap1[val];
+          copyButton1.disabled = false;
+        } else {
+          textOutput1.textContent =
+            "Please select an option from the first dropdown.";
+          copyButton1.disabled = true;
+        }
+      }
+
+      function updateText2() {
+        const val = dropdown2.value;
+        if (val && textMap2[val]) {
+          textOutput2.textContent = textMap2[val];
+          copyButton2.disabled = false;
+        } else {
+          textOutput2.textContent =
+            "Please select an option from the second dropdown.";
+          copyButton2.disabled = true;
+        }
+      }
+
+      dropdown1.addEventListener("change", updateText1);
+      dropdown2.addEventListener("change", updateText2);
+
+      copyButton1.addEventListener("click", () => {
+        if (!copyButton1.disabled) {
+          navigator.clipboard
+            .writeText(textOutput1.textContent)
+            .then(() => {
+              copyButton1.textContent = "Copied!";
+              setTimeout(() => {
+                copyButton1.textContent = "Copy First Text";
+              }, 1500);
+            })
+            .catch(() => {
+              alert("Failed to copy text. Please copy manually.");
+            });
+        }
+      });
+
+      copyButton2.addEventListener("click", () => {
+        if (!copyButton2.disabled) {
+          navigator.clipboard
+            .writeText(textOutput2.textContent)
+            .then(() => {
+              copyButton2.textContent = "Copied!";
+              setTimeout(() => {
+                copyButton2.textContent = "Copy Second Text";
+              }, 1500);
+            })
+            .catch(() => {
+              alert("Failed to copy text. Please copy manually.");
+            });
+        }
+      });
+    </script>
+  </body>
+</html>
