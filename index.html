@@ -86,6 +86,17 @@
       </div>
     </section>
 
+  <section>
+    <label>Rotasi Produk:</label>
+    <div id="options-rotasi">
+      <button class="option-btn" data-value="kopi">Kopi</button>
+      <button class="option-btn" data-value="kojic">Kojic</button>
+      <button class="option-btn" data-value="sto">STO</button>
+      <button class="option-btn" data-value="kopi-kojic">Kopi & Kojic</button>
+    </div>
+  </section>
+
+
     <div id="copied" class="copied-msg">Text copied to clipboard!</div>
 
     <script>
@@ -132,6 +143,23 @@ Jika videonya sudah dibuat boleh langsung diupload dan tolong kasih ke aku linkn
         STOMH: `Aku sudah request untuk pengiriman dan untuk referensinya dari sini ya Kak (https://docs.google.com/presentation/d/1xBHovOdpkUhtfo3pg5Q5k9CS-9F94lEBy-IzhJmX-kI/edit?usp=sharing) atau Kakak punya gaya tersendiri boleh disesuaikan.
 Jika videonya sudah dibuat boleh langsung diupload dan tolong kasih ke aku linknya agar mempermudah aku rekap video ya Kakk.`,
       };
+
+      const textMapRotasi = {
+  kopi: `Halo Kak, aku Reynanda dari Biotalk. Kak, untuk produknya kami ada rotasi jadi sekarang yang dikirim 1 pcs Biotalk Coffee Scrub Soap, bagaimana Kak?`,
+  kojic: `Halo Kak, aku Reynanda dari Biotalk. Kak, untuk produknya kami ada rotasi jadi sekarang yang dikirim 1 pcs Biotalk Pure Kojic Soap, bagaimana Kak?`,
+  sto: `Halo Kak, aku Reynanda dari Biotalk. Kak, untuk produknya kami ada rotasi jadi sekarang yang dikirim 1 pcs Biotalk Stretch Mark Oil, bagaimana Kak?`,
+  "kopi-kojic": `Halo Kak, aku Reynanda dari Biotalk. Kak, untuk produknya kami ada rotasi jadi sekarang yang dikirim 2 pcs (1 pcs Biotalk Coffee Scrub Soap & 1 pcs Biotalk Pure Kojic Soap), bagaimana Kak?`
+      };
+
+      document.querySelectorAll("#options-rotasi .option-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const val = btn.getAttribute("data-value");
+          if (val && textMapRotasi[val]) {
+            copyText(textMapRotasi[val]);
+          }
+        });
+      });
+
 
       function copyText(content) {
         navigator.clipboard.writeText(content).then(() => {
