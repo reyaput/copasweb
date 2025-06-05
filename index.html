@@ -66,10 +66,6 @@
       <div id="options1">
         <button class="option-btn" data-value="chat">Chat</button>
         <button class="option-btn" data-value="skin">Skin</button>
-        <button class="option-btn" data-value="sow_salep">SOW Salep</button>
-        <button class="option-btn" data-value="sow_body_wash">SOW Body Wash</button>
-        <button class="option-btn" data-value="sow_kopi_mikro">SOW kopi mikro</button>
-        <button class="option-btn" data-value="sow_kopi_nano">SOW kopi nano</button>
         <button class="option-btn" data-value="shipping">Shipping</button>
       </div>
     </section>
@@ -77,10 +73,16 @@
     <section>
       <label>Second Options:</label>
       <div id="options2">
-        <button class="option-btn" data-value="brief_kopi_nano">Brief kopi nano</button>
-        <button class="option-btn" data-value="brief_kopi_mikro">Brief kopi mikro</button>
-        <button class="option-btn" data-value="brief_salep">Brief salep</button>
-        <button class="option-btn" data-value="brief_body_wash">Brief body wash</button>
+        <button class="option-btn" data-value="CSM">CSM</button>
+        <button class="option-btn" data-value="CSMH">CSMH</button>
+        <button class="option-btn" data-value="CSB">CSB</button>
+        <button class="option-btn" data-value="PKMH">PKMH</button>
+        <button class="option-btn" data-value="PKM">PKM</button>
+        <button class="option-btn" data-value="KKH">KKH</button>
+        <button class="option-btn" data-value="KKMH">KKMH</button>
+        <button class="option-btn" data-value="STOM">STOM</button>
+        <button class="option-btn" data-value="STOH">STOH</button>
+        <button class="option-btn" data-value="STOMH">STOMH</button>
       </div>
     </section>
 
@@ -98,42 +100,6 @@ Product : Coffee Scrub Soap/Honey Calendula Body Wash/Natural Calendula Salve
 
 Jika berminat boleh sertakan RCnya yaa. Aku tunggu kabar baiknya yaa kak 🥰`,
         skin: `Mohon maaf sebelumnya Kak, apakah Kakak ada riwayat bekas luka/kulit sensitif/eksim? karena produk kami berfokus di masalah kulit`,
-        sow_salep: `Hallo Kakk, tim kita acc Kak berikut untuk SOW dan rcnya
-SOW: 1VT + OWNING + YELLOW CART
-RATE CARD: ………
-PRODUCT: Natural Calendula Salve
-TIMELINE: MEI 2025
-DEADLINE DRAFTING: H+3 sejak produk sampai
-DEADLINE POSTING: H+1 sejak drafting disetujui
-Payment akan dilakukan setelah posting dan payment akan selalu dilakukan setiap Kamis
-Untuk TnCnya apakah aman Kak?`,
-        sow_body_wash: `Hallo Kakk, tim kita acc Kak berikut untuk SOW dan rcnya
-SOW: 1VT + OWNING + YELLOW CART
-RATE CARD: ………
-PRODUCT: Bodywash (Calendula Series)
-TIMELINE: MEI 2025
-DEADLINE DRAFTING: H+3 sejak produk sampai
-DEADLINE POSTING: H+1 sejak drafting disetujui
-Payment akan dilakukan setelah posting dan payment akan selalu dilakukan setiap Kamis
-Untuk TnCnya apakah aman Kak?`,
-        sow_kopi_mikro: `Hallo Kakk, tim kita acc Kak berikut untuk SOW dan rcnya
-SOW: 1VT + YELLOW CART
-RATE CARD: ………
-PRODUCT: Coffee Scrub
-TIMELINE: MEI 2025
-DEADLINE DRAFTING: H+3 sejak produk sampai
-DEADLINE POSTING: H+1 sejak drafting disetujui
-Payment akan dilakukan setelah posting dan payment akan selalu dilakukan setiap Kamis
-Untuk TnCnya apakah aman Kak?`,
-        sow_kopi_nano: `Hallo Kakk, tim kita acc Kak berikut untuk SOW dan rcnya
-SOW: 1VT + OWNING + YELLOW CART + BOOST CODE 365
-RATE CARD: ………
-PRODUCT: Coffee Scrub
-TIMELINE: MEI 2025
-DEADLINE DRAFTING: H+3 sejak produk sampai
-DEADLINE POSTING: H+1 sejak drafting disetujui
-Payment akan dilakukan setelah posting dan payment akan selalu dilakukan setiap Kamis
-Untuk TnCnya apakah aman Kak?`,
         shipping: `Mohon diisi template berikut ya Kak agar mempermudah aku isi di sistem : 
 Nama : 
 Nama akun : 
@@ -141,33 +107,30 @@ Nama akun :
 SHIPPING 
 Nama Penerima : 
 No Tlpn : 
-Alamat Lengkap (Jalan, No. rumah, Kec, Kel, Kode pos): 
-
-PAYMENT 
-PAYMENT (diutamakan BCA, E-Wallet/Bank Lain maka akan dipotong biaya admin)
-Nama BANK : 
-Nama Penerima : 
-No rek :
-`,
+Alamat Lengkap (Jalan, No. rumah, Kec, Kel, Kode pos): `,
       };
 
       const textMap2 = {
-        brief_kopi_nano: `Kak ini untuk briefnya ya, tolong diperhatikan requirment, guideline, dan do's & dont'snyaa
-https://docs.google.com/presentation/d/1LHrAh_FBtzW3eU_45_gcO-M9MOYJstUPwBkJOJUg2L0/edit?usp=sharing
-
-untuk drafnya mohon dimasukan ke dalam drive dan jangan diprivate, nanti jika sudah ada drivenya mohon dikabarin dan saya akan mengirim form untuk diisi.`,
-        brief_kopi_mikro: `Kak ini untuk briefnya ya, tolong diperhatikan requirment, guideline, dan do's & dont'snyaa
-https://docs.google.com/presentation/d/1JMP16zpM1D2a63-zZWVnroKfbCfRXTB8_bccVSfh6Ck/edit?usp=sharing
-
-untuk drafnya mohon dimasukan ke dalam drive dan jangan diprivate, nanti jika sudah ada drivenya mohon dikabarin dan saya akan mengirim form untuk diisi.`,
-        brief_salep: `Kak ini untuk briefnya ya, tolong diperhatikan requirment, guideline, dan do's & dont'snyaa
-https://docs.google.com/presentation/d/1UH-qSky42x4uRzB-z4KZh-21um1213IE-mldELSNzKg/edit?usp=sharing
-
-untuk drafnya mohon dimasukan ke dalam drive dan jangan diprivate, nanti jika sudah ada drivenya mohon dikabarin dan saya akan mengirim form untuk diisi.`,
-        brief_body_wash: `Kak ini untuk briefnya ya, tolong diperhatikan requirment, guideline, dan do's & dont'snyaa
-https://docs.google.com/presentation/d/123PQMGxQZCmS41VOdDUKkOY5A36JG73r7XqXzApXJ78/edit?slide=id.g2c518cc88a9_0_213#slide=id.g2c518cc88a9_0_213
-
-untuk drafnya mohon dimasukan ke dalam drive dan jangan diprivate, nanti jika sudah ada drivenya mohon dikabarin dan saya akan mengirim form untuk diisi.`,
+        CSM: `Aku sudah request untuk pengiriman dan untuk referensinya dari sini ya Kak (https://docs.google.com/presentation/d/1t7aBsyP6kMM9eCwWJf2xqLTwXBZzGazspOUScJNDZAs/edit?usp=sharing) atau Kakak punya gaya tersendiri boleh disesuaikan.
+Jika videonya sudah dibuat boleh langsung diupload dan tolong kasih ke aku linknya agar mempermudah aku rekap video ya Kakk.`,
+        CSMH: `Aku sudah request untuk pengiriman dan untuk referensinya dari sini ya Kak (https://docs.google.com/presentation/d/1-pTTomDx7USju0B75DtS_0Bkw9QwogB2LQqcAcaeJnE/edit?usp=sharing) atau Kakak punya gaya tersendiri boleh disesuaikan.
+Jika videonya sudah dibuat boleh langsung diupload dan tolong kasih ke aku linknya agar mempermudah aku rekap video ya Kakk.`,
+        CSB: `Aku sudah request untuk pengiriman dan untuk referensinya dari sini ya Kak (https://docs.google.com/presentation/d/1EqDAVOf6YEEW1th8FKuw3eXeXIFUjueyx7AjeVTJcr0/edit?usp=sharing) atau Kakak punya gaya tersendiri boleh disesuaikan.
+Jika videonya sudah dibuat boleh langsung diupload dan tolong kasih ke aku linknya agar mempermudah aku rekap video ya Kakk.`,
+        PKMH: `Aku sudah request untuk pengiriman dan untuk referensinya dari sini ya Kak (https://docs.google.com/presentation/d/1QjpUdTsHjZ__QZdTPj87Jx9TImTb5i2ASJLGVwEW11U/edit?usp=sharing) atau Kakak punya gaya tersendiri boleh disesuaikan.
+Jika videonya sudah dibuat boleh langsung diupload dan tolong kasih ke aku linknya agar mempermudah aku rekap video ya Kakk.`,
+        PKM: `Aku sudah request untuk pengiriman dan untuk referensinya dari sini ya Kak (https://docs.google.com/presentation/d/1BHzESfxOi9YjDDPxMxwDIeR8oLRYCdF6qg8fjAqpoAs/edit?usp=sharing) atau Kakak punya gaya tersendiri boleh disesuaikan.
+Jika videonya sudah dibuat boleh langsung diupload dan tolong kasih ke aku linknya agar mempermudah aku rekap video ya Kakk.`,
+        KKH: `Aku sudah request untuk pengiriman dan untuk referensinya dari sini ya Kak (https://docs.google.com/presentation/d/1S54-4R0Fkcou3ByG0qMdkaUFkLXlAbhb_uwm5gCHDkE/edit?usp=sharing) atau Kakak punya gaya tersendiri boleh disesuaikan.
+Jika videonya sudah dibuat boleh langsung diupload dan tolong kasih ke aku linknya agar mempermudah aku rekap video ya Kakk.`,
+        KKMH: `Aku sudah request untuk pengiriman dan untuk referensinya dari sini ya Kak (https://docs.google.com/presentation/d/1Kv8CaDJESTNK1QXJcBwoSDHjKYNrMmTDNnSafeOlOW8/edit?usp=sharing) atau Kakak punya gaya tersendiri boleh disesuaikan.
+Jika videonya sudah dibuat boleh langsung diupload dan tolong kasih ke aku linknya agar mempermudah aku rekap video ya Kakk.`,
+        STOM: `Aku sudah request untuk pengiriman dan untuk referensinya dari sini ya Kak (https://docs.google.com/presentation/d/1A6oLt9b9QwW4QPh_MVMvxfssdg8pqj2YgPwfKvGFfFw/edit?usp=sharing) atau Kakak punya gaya tersendiri boleh disesuaikan.
+Jika videonya sudah dibuat boleh langsung diupload dan tolong kasih ke aku linknya agar mempermudah aku rekap video ya Kakk.`,
+        STOH: `Aku sudah request untuk pengiriman dan untuk referensinya dari sini ya Kak (https://docs.google.com/presentation/d/1_XSQk_Z-TvD4VL9K-1U_OM5X4T706wwOhikcGitk7sE/edit?usp=sharing) atau Kakak punya gaya tersendiri boleh disesuaikan.
+Jika videonya sudah dibuat boleh langsung diupload dan tolong kasih ke aku linknya agar mempermudah aku rekap video ya Kakk.`,
+        STOMH: `Aku sudah request untuk pengiriman dan untuk referensinya dari sini ya Kak (https://docs.google.com/presentation/d/1xBHovOdpkUhtfo3pg5Q5k9CS-9F94lEBy-IzhJmX-kI/edit?usp=sharing) atau Kakak punya gaya tersendiri boleh disesuaikan.
+Jika videonya sudah dibuat boleh langsung diupload dan tolong kasih ke aku linknya agar mempermudah aku rekap video ya Kakk.`,
       };
 
       function copyText(content) {
