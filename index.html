@@ -66,7 +66,8 @@
       <div id="options1">
         <button class="option-btn" data-value="chat">Chat</button>
         <button class="option-btn" data-value="tanya">Tanya</button>
-        <button class="option-btn" data-value="shipping">Shipping</button>
+        <button class="option-btn" data-value="shipping">Shipping KOL</button>
+        <button class="option-btn" data-value="shippingAffiliate">Shipping Affiliates</button>
         <button class="option-btn" data-value="ganti">Ganti</button>
       </div>
     </section>
@@ -74,16 +75,11 @@
     <section>
       <label>Second Options:</label>
       <div id="options2">
-        <button class="option-btn" data-value="TKH">TKH</button>
-        <button class="option-btn" data-value="CSMH">CSMH</button>
-        <button class="option-btn" data-value="CSB">CSB</button>
-        <button class="option-btn" data-value="PKMH">PKMH</button>
-        <button class="option-btn" data-value="PKM">PKM</button>
-        <button class="option-btn" data-value="KKH">KKH</button>
-        <button class="option-btn" data-value="KKMH">KKMH</button>
-        <button class="option-btn" data-value="STOM">STOM</button>
-        <button class="option-btn" data-value="STOH">STOH</button>
-        <button class="option-btn" data-value="STOMH">STOMH</button>
+        <button class="option-btn" data-value="SH">SH</button>
+        <button class="option-btn" data-value="CSH">CSH</button>
+        <button class="option-btn" data-value="CSKH">CSKH</button>
+        <button class="option-btn" data-value="ShampooNano">Shampoo Nano</button>
+        <button class="option-btn" data-value="ShampooMicro">Shampoo Micro</button>
       </div>
     </section>
 
@@ -129,58 +125,100 @@ Nama Penerima :
 No rek :
 
 Payment akan dilakukan setelah posting dan payment akan selalu dilakukan setiap Kamis `,
+        shippingAffiliate : `Mohon di lengkapi data berikut ya kak : 
+Nama : 
+Nama akun : 
+
+SHIPPING 
+Nama Penerima : 
+No Tlpn : 
+Alamat Lengkap (Jalan, No. rumah, Kec, Kel, Kode pos): `,
         ganti : `Hi Kak, mohon maaf sebelumnya untuk barter produk Bundle 2 Coffee Scrub sudah penuh sekarang yang mau dikirim itu produk Biotalk Trial Kit 
 (https://shop-id.tokopedia.com/view/product/1731479107957393366?region=ID&locale=id-ID&source=seller_center&no-cache=1&e=1)
 untuk SOWnya masih sama Kak. untuk SOWnya *2VT masing-masing VT yc + boost code 365d*. Jika Kakak masih berminat boleh dikonfirmasi ya Kak`
       };
 
       const textMap2 = {
-        TKH: `Kak ini yang akan dikirim produk *Biotalk Trial Kit* ya
-(https://shop-id.tokopedia.com/view/product/1731479107957393366?region=ID&locale=id-ID&source=seller_center&no-cache=1&e=1) 
-Aku sudah request untuk pengiriman dan untuk referensinya dari sini ya Kak (https://docs.google.com/presentation/d/11QCpay9z7dqKaa1BWK0CDUkFCkHxrZhLTz_KCSGvv0E/edit?usp=sharing) atau Kakak punya gaya tersendiri boleh disesuaikan.
-Jika videonya sudah dibuat boleh langsung diupload dan tolong kasih ke aku linknya agar mempermudah aku rekap video ya Kakk.`,
-        CSMH: `Kak ini yang akan dikirim produk *Coffee Scrub Soap* ya
-Aku sudah request untuk pengiriman dan untuk referensinya dari sini ya Kak (https://docs.google.com/presentation/d/1-pTTomDx7USju0B75DtS_0Bkw9QwogB2LQqcAcaeJnE/edit?usp=sharing) atau Kakak punya gaya tersendiri boleh disesuaikan.
-Jika videonya sudah dibuat boleh langsung diupload dan tolong kasih ke aku linknya agar mempermudah aku rekap video ya Kakk.`,
-        CSB: `Kak ini yang akan dikirim produk 2 Coffee Scrub Soap
-Untuk videonya total ada 2 vt, kerkun bundle ini link kerkunnya.
-https://shop-id.tokopedia.com/view/product/1729664581222829014?region=ID&locale=id-ID&source=seller_center&no-cache=1&e=1
+        CSKH: `Kak ini yang akan dikirim produk *1pcs Biotalk Coffee Scrub Soap* ya Kak
+*BERIKUT KERKUNNYA*
+(https://shop-id.tokopedia.com/view/product/1729941537702382550?region=ID&locale=id-ID&source=seller_center&no-cache=1&e=1)
+ 
+*Aku sudah request untuk pengiriman* 
 
-Aku sudah request untuk pengiriman dan untuk referensinya dari sini ya Kak (https://docs.google.com/presentation/d/1EqDAVOf6YEEW1th8FKuw3eXeXIFUjueyx7AjeVTJcr0/edit?usp=sharing) atau Kakak punya gaya tersendiri boleh disesuaikan.
-Jika videonya sudah dibuat boleh langsung diupload dan tolong kasih ke aku linknya agar mempermudah aku rekap video ya Kakk.`,
-        PKMH: `Aku sudah request untuk pengiriman dan untuk referensinya dari sini ya Kak (https://docs.google.com/presentation/d/1QjpUdTsHjZ__QZdTPj87Jx9TImTb5i2ASJLGVwEW11U/edit?usp=sharing) atau Kakak punya gaya tersendiri boleh disesuaikan.
-Jika videonya sudah dibuat boleh langsung diupload dan tolong kasih ke aku linknya agar mempermudah aku rekap video ya Kakk.`,
-        PKM: `Aku sudah request untuk pengiriman dan untuk referensinya dari sini ya Kak (https://docs.google.com/presentation/d/1BHzESfxOi9YjDDPxMxwDIeR8oLRYCdF6qg8fjAqpoAs/edit?usp=sharing) atau Kakak punya gaya tersendiri boleh disesuaikan.
-Jika videonya sudah dibuat boleh langsung diupload dan tolong kasih ke aku linknya agar mempermudah aku rekap video ya Kakk.`,
-        KKH: `Kak ini yang akan dikirim produk *Coffee Scrub Soap & Pure Kojic Soap*
-Untuk videonya total ada 2 vt dan di vtnya kerkunnya langsung 2 ya Kak, kerkun coffee dan kojic ini link kerkunnya.
-https://shop-id.tokopedia.com/view/product/1729941537702382550?region=ID&locale=id-ID&source=seller_center&no-cache=1&e=1
+berikut rekomendasi konten video berdasarkan data Biotalk (Konten yang performanya bagus)
+Editing  : Video pendek random selipkan produk akhir video
+Durasi   : 19 - 21 detik
+Key Word Copywriting : Pake, Sabun, Mulus, Bekas Luka, Baut
+Contoh : 
+https://www.tiktok.com/@mulaiajadulushop/video/7521046120194182408?shop_region=ID
+https://www.tiktok.com/@mulaiajadulushop/video/7518665851973684488?shop_region=ID`,
+        CSH: `Kak ini yang akan dikirim produk *1pcs Biotalk Coffee Scrub Soap* ya Kak
+*BERIKUT KERKUNNYA*
+(https://shop-id.tokopedia.com/view/product/1729941537702382550?region=ID&locale=id-ID&source=seller_center&no-cache=1&e=1)
+ 
+*Aku sudah request untuk pengiriman* 
 
-https://shop-id.tokopedia.com/view/product/1729667622439520214?region=ID&locale=id-ID&source=seller_center&no-cache=1&e=1
+berikut rekomendasi konten video berdasarkan data Biotalk (Konten yang performanya bagus)
+Editing  : Video pendek random selipkan produk akhir video
+Durasi   : 19 - 21 detik
+Key Word Copywriting : Pake, Sabun, Mulus, Bekas Luka, Baut
+Contoh :
+https://www.tiktok.com/@mulaiajadulushop/video/7519378823884950802?shop_region=ID
+https://www.tiktok.com/@mulaiajadulushop/video/7518665851973684488?shop_region=ID`,
+        SH:`Kak ini yang akan dikirim produk *1pcs Biotalk Cool & Calming Shampoo* ya Kak
+*BERIKUT KERKUNNYA*
+(https://shop-id.tokopedia.com/view/product/1731671618871723990?region=ID&locale=id-ID&source=seller_center&no-cache=1&e=1)
+ 
+*Aku sudah request untuk pengiriman ya kak*
 
-Aku sudah request untuk pengiriman dan untuk referensinya dari sini ya Kak (https://docs.google.com/presentation/d/1S54-4R0Fkcou3ByG0qMdkaUFkLXlAbhb_uwm5gCHDkE/edit?usp=sharing) atau Kakak punya gaya tersendiri boleh disesuaikan.
-Jika videonya sudah dibuat boleh langsung diupload dan tolong kasih ke aku linknya agar mempermudah aku rekap video ya Kakk.`,
-        KKMH: `Untuk videonya total ada 2 vt dan di vtnya kerkunnya langsung 2 ya Kak, kerkun coffee dan kojic ini link kerkunnya.
-https://shop-id.tokopedia.com/view/product/1729941537702382550?region=ID&locale=id-ID&source=seller_center&no-cache=1&e=1
+berikut rekomendasi konten video berdasarkan data Biotalk (Konten yang performanya bagus)
+Editing  : Video pendek random selipkan produk akhir video
+Durasi   : 19 - 21 detik
+Key Word Copywriting : Pake, Shampoo, Psoriasis
+Contoh : 
+https://www.tiktok.com/@mulaiajadulushop/video/7519378823884950802?shop_region=ID
+https://www.tiktok.com/@mulaiajadulushop/video/7518665851973684488?shop_region=ID`,
+        ShampooNano:`Halo Kak,
 
-https://shop-id.tokopedia.com/view/product/1729667622439520214?region=ID&locale=id-ID&source=seller_center&no-cache=1&e=1
+Shipping sudah aku request ya, mohon ditunggu 🙏
 
-Aku sudah request untuk pengiriman dan untuk referensinya dari sini ya Kak (https://docs.google.com/presentation/d/1Kv8CaDJESTNK1QXJcBwoSDHjKYNrMmTDNnSafeOlOW8/edit?usp=sharing) atau Kakak punya gaya tersendiri boleh disesuaikan.
-Jika videonya sudah dibuat boleh langsung diupload dan tolong kasih ke aku linknya agar mempermudah aku rekap video ya Kakk.`,
-        STOM: `Aku sudah request untuk pengiriman dan untuk referensinya dari sini ya Kak (https://docs.google.com/presentation/d/1A6oLt9b9QwW4QPh_MVMvxfssdg8pqj2YgPwfKvGFfFw/edit?usp=sharing) atau Kakak punya gaya tersendiri boleh disesuaikan.
-Jika videonya sudah dibuat boleh langsung diupload dan tolong kasih ke aku linknya agar mempermudah aku rekap video ya Kakk.`,
-        STOH: `Aku sudah request untuk pengiriman dan untuk referensinya dari sini ya Kak (https://docs.google.com/presentation/d/1_XSQk_Z-TvD4VL9K-1U_OM5X4T706wwOhikcGitk7sE/edit?usp=sharing) atau Kakak punya gaya tersendiri boleh disesuaikan.
-Jika videonya sudah dibuat boleh langsung diupload dan tolong kasih ke aku linknya agar mempermudah aku rekap video ya Kakk.`,
-        STOMH: `Kak ini yang akan dikirim produk *Stretch Mark Oil* ya
-Aku sudah request untuk pengiriman dan untuk referensinya dari sini ya Kak (https://docs.google.com/presentation/d/1xBHovOdpkUhtfo3pg5Q5k9CS-9F94lEBy-IzhJmX-kI/edit?usp=sharing) atau Kakak punya gaya tersendiri boleh disesuaikan.
-Jika videonya sudah dibuat boleh langsung diupload dan tolong kasih ke aku linknya agar mempermudah aku rekap video ya Kakk.`,
+Berikut link untuk brief presentasinya:
+🔗 https://docs.google.com/presentation/d/1gjOc2N2Le20cde7SbYxVB7flhs8LOfWN5JEpKiVud4o/edit?usp=sharing
+
+🎯 Key Points untuk Video:
+Topik utama: Mohon mention soal Psoriasis di awal video dan bahwa Shampoo ini dapat untuk meredakan Psoriasis(bagian hook).
+
+Footage Psoriasis bisa diambil dari link berikut:
+📁 Link Footage Psoriasis
+
+Gaya storytelling: Bebas dan disesuaikan dengan gaya Kakak masing-masing.
+
+Produk yang dibahas: Kerkun – sabun untuk kulit sensitif & psoriasis.
+🛒 https://shop-id.tokopedia.com/view/product/1731671618871723990?region=ID&locale=id-ID&source=seller_center&no-cache=1&e=1`,
+        ShampooMicro:`Halo Kak,
+
+Shipping sudah aku request ya, mohon ditunggu 🙏
+
+Berikut link untuk brief presentasinya:
+🔗 https: https://docs.google.com/presentation/d/1vWLAuqwsrqE4A1MTVomTjifD72KqGW3J-IRkQj8c5Xo/edit?usp=sharing
+
+🎯 Key Points untuk Video:
+Topik utama: Mohon mention soal Psoriasis di awal video dan bahwa Shampoo ini dapat untuk meredakan Psoriasis(bagian hook).
+
+Footage Psoriasis bisa diambil dari link berikut:
+📁 Link Footage Psoriasis
+
+Gaya storytelling: Bebas dan disesuaikan dengan gaya Kakak masing-masing.
+
+Produk yang dibahas: Kerkun – sabun untuk kulit sensitif & psoriasis.
+🛒 https://shop-id.tokopedia.com/view/product/1731671618871723990?region=ID&locale=id-ID&source=seller_center&no-cache=1&e=1`
       };
 
       const textMapRotasi = {
   kopi: `Halo Kak, aku Reynanda dari Biotalk. Kak, untuk produknya kami ada rotasi jadi sekarang yang dikirim 1 pcs Biotalk Coffee Scrub Soap, bagaimana Kak?`,
   kojic: `Halo Kak, aku Reynanda dari Biotalk. Kak, untuk produknya kami ada rotasi jadi sekarang yang dikirim 1 pcs Biotalk Pure Kojic Soap, bagaimana Kak?`,
   sto: `Halo Kak, aku Reynanda dari Biotalk. Kak, untuk produknya kami ada rotasi jadi sekarang yang dikirim 1 pcs Biotalk Stretch Mark Oil, bagaimana Kak?`,
-  "kopi-kojic": `Halo Kak, aku Reynanda dari Biotalk. Kak, untuk produknya kami ada rotasi jadi sekarang yang dikirim 2 pcs (1 pcs Biotalk Coffee Scrub Soap & 1 pcs Biotalk Pure Kojic Soap), bagaimana Kak?`
+  shampoo: `Halo Kak, aku Reynanda dari Biotalk. Kak, untuk produknya kami ada rotasi jadi sekarang yang dikirim 1 pcs (1 pcs Biotalk Cool & Calming Shampoo), bagaimana Kak?`
       };
 
       document.querySelectorAll("#options-rotasi .option-btn").forEach((btn) => {
